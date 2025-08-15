@@ -31,7 +31,7 @@ This app performs **CRUD operations** using a public API and displays data in a 
 ---
 
 ## Project Structure
-```plaintext
+```
 lib/
   core/di/injector.dart
   features/
