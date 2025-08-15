@@ -33,34 +33,28 @@ This app performs **CRUD operations** using a public API and displays data in a 
 ## Project Structure
 ```plaintext
 lib/
-│
-├── injection.dart                  # GetIt setup
-├── main.dart                       # App entry point
-│
-└── features/
-    └── items/
-        ├── data/
-        │   ├── item_api_service.dart         # API calls implementation
-        │   └── models/
-        │       └── item_model.dart           # Item data model
-        │
-        ├── domain/
-        │   └── repositories/
-        │       └── item_repository.dart      # Abstract repository interface
-        │
-        ├── infrastructure/
-        │   └── item_repository_impl.dart     # Repository implementation
-        │
-        └── presentation/
-            ├── bloc/
-            │   ├── item_bloc.dart            # BLoC logic
-            │   ├── item_event.dart           # BLoC events
-            │   └── item_state.dart           # BLoC states
-            │
-            └── pages/
-                ├── items_page.dart           # Items list page
-                ├── item_detail_page.dart     # Item details page
-                └── item_form_page.dart       # Create/Edit form page
+  core/di/injector.dart
+  features/
+    items/
+      data/
+        api/api_client.dart
+        models/item_model.dart
+        repositories/item_repository_impl.dart
+      domain/
+        entities/item.dart
+        repositories/item_repository.dart
+      presentation/
+        bloc/
+          item_bloc.dart
+          item_event.dart
+          item_state.dart
+        pages/
+          item_list_page.dart
+          item_detail_page.dart
+          item_form_page.dart
+        widgets/
+          item_list_tile.dart
+  main.dart
 ````
 
 ---
